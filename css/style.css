@@ -53,6 +53,10 @@
   color: var(--main-bg-color);
 }
 
+.margin-section {
+  margin-bottom: 35px;
+}
+
 /********************* Header ***************************/
 
 header {
@@ -116,6 +120,137 @@ nav {
 
 .navbar-item a:hover::before {
   width: 100%;
+}
+
+/********************* Zone recherche ***************************/
+.headlines-txt {
+  margin-top: 8px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  height: 49px;
+  width: auto;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  height: 49px;
+  width: auto;
+
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-bg-color);
+  border-radius: 15px 0 0 15px;
+}
+
+.fa-location-dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 49px;
+  height: 100%;
+  
+  color: black;
+}
+
+.form input {
+  border: none;
+  outline: none;
+
+  height: 100%;
+  font-weight: 700;
+  
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.form input::placeholder {
+  color: black;
+}
+
+.btn-form-desktop {
+  height: 49px;
+  padding: 15px;
+  border: none;
+  border-radius: 0px 15px 15px 0px;
+
+  background-color: var(--main-color);
+  color: white;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.btn-form-mobile {
+  display:none; /* Caché par défaut */
+  height: 49px;
+  width: 49px;
+  padding: 15px;
+
+  border: none;
+  border-radius: 15px;
+
+  cursor: pointer;
+  background-color: var(--main-color);
+}
+
+.fa-magnifying-glass {
+  color: white;
+  font-weight: 700;
+}
+
+.filtres {
+  display: flex;
+}
+
+.filtres button {
+  background-color: white;
+  border: 2px solid #d9d9d9;
+  border-radius: 25px;
+  gap: 10px;
+  padding: 4px 19px;
+  margin-left: 15px;
+  height: 50px;
+  width: auto;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filtres button:hover {
+  background-color: var(--filter-bg-color);
+  transition: 0.3s;
+}
+
+.filtres i {
+  color: var(--main-color);
+}
+
+.filtres p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-weight: 700;
+}
+
+.round-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #d9d9d9;
+  border-radius: 25px;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.search-info {
+  display: flex;
+  align-items: center;
 }
 
 /****** Hebergements And Populaires ***********/
