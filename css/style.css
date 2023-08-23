@@ -53,6 +53,10 @@
   color: var(--main-bg-color);
 }
 
+.margin-section {
+  margin-bottom: 35px;
+}
+
 /********************* Header ***************************/
 
 header {
@@ -119,61 +123,87 @@ nav {
 }
 
 /********************* Zone recherche ***************************/
-
-.headlines {
-  margin-bottom: 35px;
-}
-
 .headlines-txt {
   margin-top: 8px;
 }
 
-.search-box-section {
-  margin-bottom: 35px;
+.form {
   display: flex;
-}
-
-.search-form-inputs {
+  align-items: center;
   height: 49px;
   width: auto;
 }
 
-.search-icon {
+.searchbar {
+  display: flex;
+  align-items: center;
+  height: 49px;
+  width: auto;
+
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-bg-color);
+  border-radius: 15px 0 0 15px;
+}
+
+.fa-location-dot {
   display: flex;
   justify-content: center;
   align-items: center;
+  
   width: 49px;
-  height: 49px;
-  border: 1px solid #d9d9d9;
-}
-
-.search-icon i {
+  height: 100%;
+  
   color: black;
 }
 
-.search-form-inputs input {
+.form input {
   border: none;
-  font-weight: 700;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  outline: none;
 
+  height: 100%;
+  font-weight: 700;
+  
   padding-left: 24px;
   padding-right: 24px;
 }
 
-.search-form-inputs input::placeholder {
+.form input::placeholder {
   color: black;
-  text-align: center;
 }
 
-.search-form-inputs button {
+.btn-form-desktop {
   height: 49px;
-  background-color: var(--main-color);
-  padding: 15px 16px;
+  padding: 15px;
   border: none;
   border-radius: 0px 15px 15px 0px;
+
+  background-color: var(--main-color);
   color: white;
   font-weight: 700;
+
+  cursor: pointer;
+}
+
+.btn-form-mobile {
+  display:none; /* Caché par défaut */
+  height: 49px;
+  width: 49px;
+  padding: 15px;
+
+  border: none;
+  border-radius: 15px;
+
+  cursor: pointer;
+  background-color: var(--main-color);
+}
+
+.fa-magnifying-glass {
+  color: white;
+  font-weight: 700;
+}
+
+.filtres {
+  display: flex;
 }
 
 .filtres button {
@@ -188,6 +218,11 @@ nav {
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.filtres button:hover {
+  background-color: var(--filter-bg-color);
+  transition: 0.3s;
 }
 
 .filtres i {
@@ -217,7 +252,6 @@ nav {
   display: flex;
   align-items: center;
 }
-
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
