@@ -1,4 +1,4 @@
-/********************* Général ***************************/
+/********************** Général *****************************/
 * {
   box-sizing: border-box; /* Pour que les paddings et les borders ne soient pas comptés en plus de la largeur */
   margin: 0; /* Pour éviter les marges par défaut */
@@ -57,7 +57,7 @@
   margin-bottom: 35px;
 }
 
-/********************* Header ***************************/
+/*********************** Header *****************************/
 
 header {
   display: flex;
@@ -124,7 +124,7 @@ nav {
   width: 100%;
 }
 
-/********************* Zone recherche ***************************/
+/***************** Zone recherche ***************************/
 .headlines-txt {
   margin-top: 8px;
 }
@@ -246,7 +246,7 @@ nav {
   border: 1px solid #d9d9d9;
   border-radius: 25px;
   margin-right: 10px;
-  
+
   font-size: 12px;
 }
 
@@ -255,7 +255,8 @@ nav {
   align-items: center;
 }
 
-/****** Hebergements And Populaires ***********/
+/************** Hebergements And Populaires *****************/
+
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
@@ -268,12 +269,60 @@ nav {
   box-sizing: border-box;
 }
 
-/****** Hebergements ***********/
+/*********************** Hebergements ***********************/
 .hebergements {
   width: 65%;
 }
 
-/****** Populaires ***********/
+.hebergements-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card2 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 33%;
+  align-content: space-between;
+}
+
+.hebergements-cards .card2 {
+  margin-top: 30px;
+  max-width: 250px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card2 img {
+  border-radius: 20px 20px 0px 0px;
+  max-height: 124px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 4px;
+}
+
+.card-content {
+  display: flex;
+  padding: 0px 15px 15px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-txt * {
+  padding-bottom: 8px;
+}
+
+.hebergements-plus {
+  margin-top: 30px;
+}
+
+/************************ Populaires ************************/
+
 .populaires {
   width: 32%;
 }
@@ -286,7 +335,7 @@ nav {
 
 .populaires-cards .card {
   display: flex;
-  margin-top: 33px;
+  margin-top: 30px;
 }
 
 .populaires-cards img {
@@ -320,7 +369,7 @@ nav {
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
-/****** Media queries ***********/
+/********************** Media queries ***********************/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
   .hebergements-and-populaires {
