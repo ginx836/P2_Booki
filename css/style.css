@@ -105,10 +105,11 @@ nav {
 
 .navbar-item a:hover {
   color: var(--main-color);
-  transition: 0.3s;
+  transition: 0.3s; /* Pour une transition fluide */
 }
 
 .navbar-item a::before {
+  /* Pour créer le trait qui apparaît au survol */
   content: "";
   display: block;
   position: absolute;
@@ -119,6 +120,7 @@ nav {
 }
 
 .navbar-item a:hover::before {
+  /* Pour faire apparaître le trait au survol */
   width: 100%;
 }
 
@@ -135,11 +137,6 @@ nav {
 }
 
 .searchbar {
-  display: flex;
-  align-items: center;
-  height: 49px;
-  width: auto;
-
   background-color: var(--main-bg-color);
   border: 1px solid var(--main-bg-color);
   border-radius: 15px 0 0 15px;
@@ -149,10 +146,10 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   width: 49px;
   height: 100%;
-  
+
   color: black;
 }
 
@@ -162,7 +159,7 @@ nav {
 
   height: 100%;
   font-weight: 700;
-  
+
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -185,7 +182,7 @@ nav {
 }
 
 .btn-form-mobile {
-  display:none; /* Caché par défaut */
+  display: none; /* Caché par défaut */
   height: 49px;
   width: 49px;
   padding: 15px;
@@ -202,37 +199,40 @@ nav {
   font-weight: 700;
 }
 
-.filtres {
+.filter {
   display: flex;
 }
 
-.filtres button {
+.filter button {
   background-color: white;
   border: 2px solid #d9d9d9;
   border-radius: 25px;
-  gap: 10px;
+
   padding: 4px 19px;
   margin-left: 15px;
   height: 50px;
   width: auto;
+
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
 }
 
-.filtres button:hover {
+.filter button:hover {
   background-color: var(--filter-bg-color);
   transition: 0.3s;
 }
 
-.filtres i {
+.filter i {
   color: var(--main-color);
 }
 
-.filtres p {
+.filter p {
   display: flex;
   align-items: center;
+
   margin: 0;
+
   font-weight: 700;
 }
 
@@ -242,9 +242,11 @@ nav {
   align-items: center;
   width: 24px;
   height: 24px;
+
   border: 1px solid #d9d9d9;
   border-radius: 25px;
   margin-right: 10px;
+  
   font-size: 12px;
 }
 
