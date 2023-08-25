@@ -373,6 +373,45 @@ nav {
 .populaires-cards .card-rating {
   margin-bottom: 5px;
 }
+/********************* Activités ****************************/
+
+.activites-container {
+  padding: 30px;
+}
+
+.container {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px; 
+}
+
+.card3 {
+  flex-shrink: 1;
+  flex-basis: 25%;
+  height:439px;
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card3 a {
+  display:flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+  max-width: 298px;
+}
+
+.card3 img {
+  border-radius: 20px 20px 0px 0px;
+  height: 380px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card3-content {
+  padding: 20px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
