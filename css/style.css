@@ -8,6 +8,10 @@
   max-width: 1440px;
 }
 
+body {
+  padding-bottom: 60.5px;
+}
+
 :root {
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
@@ -382,20 +386,20 @@ nav {
 .container {
   margin-top: 30px;
   display: flex;
-  gap: 30px; 
+  gap: 30px;
 }
 
 .card3 {
   flex-shrink: 1;
   flex-basis: 25%;
-  height:439px;
+  height: 439px;
   background-color: white;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
 .card3 a {
-  display:flex;
+  display: flex;
   flex-direction: column;
   text-decoration: none;
   color: black;
@@ -411,6 +415,37 @@ nav {
 
 .card3-content {
   padding: 20px;
+}
+
+/*******************$** Footer ******************************/
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  background-color: var(--main-bg-color);
+}
+
+.footer-subtitle-margin {
+  margin-bottom: 15px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 33%;
+}
+
+.footer-container a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+.footer-container li {
+  list-style: none;
+  margin-bottom: 15px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
