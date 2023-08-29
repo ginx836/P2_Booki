@@ -350,7 +350,6 @@ h1 {
   display: flex;
   min-height: 144px;
   height: 100%;
-  width: 100%;
   background-color: white;
 
   border-radius: 20px;
@@ -470,13 +469,9 @@ h1 {
     justify-content: space-between;
   }
 
-  .populaires-cards .card2 {
-    width: 30%;
-  }
-
-  /* Small devices (phones, less than 768px) */
-  @media (max-width: 767.98px) {
-    /* ... */
+  .card2 {
+    width: 100%;
+    max-height: 146px;
   }
 
   /* Small devices (phones, less than 768px) */
@@ -651,7 +646,9 @@ h1 {
     .card {
       margin: 0;
       width: 100%;
-      max-width: 335px;
+      max-width: 100%;
+    }
+
     }
 
     .container {
