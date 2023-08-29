@@ -222,6 +222,7 @@ h1 {
 
 .filter i {
   color: var(--main-color);
+  padding-right: 10px;
 }
 
 .filter p {
@@ -476,5 +477,206 @@ h1 {
   /* Small devices (phones, less than 768px) */
   @media (max-width: 767.98px) {
     /* ... */
+  }
+
+  /* Small devices (phones, less than 768px) */
+  @media (max-width: 767.98px) {
+    .logo {
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+
+    .logo {
+      padding: 30px;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+    }
+
+    .navbar-item {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .navbar-item a {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100%;
+      width: 100%;
+    }
+
+    .navbar-item ::after {
+      /* Pour créer le trait qui apparaît au survol */
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: var(--main-color);
+      height: 2px;
+      width: 0%;
+      bottom: 0;
+    }
+
+    .navbar-item :hover::after {
+      /* Pour faire apparaître le trait au survol */
+      width: 100%;
+    }
+
+    .navbar-item a:hover::before {
+      width: 0%;
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      /* padding: 0 20px 20px 20px; */
+      padding: 0;
+      max-width: 768px;
+    }
+
+    .search-container {
+      padding: 0 20px;
+    }
+
+    .searchbar input {
+      width: 100%;
+    }
+
+    .form {
+      width: 100%;
+    }
+
+    .btn-form-desktop {
+      display: none;
+    }
+
+    .btn-form-mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 49px;
+      width: 49px;
+      padding: 15px;
+
+      border: none;
+      border-radius: 15px;
+
+      cursor: pointer;
+      background-color: var(--main-color);
+    }
+
+    .filter {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter p {
+      display: flex;
+      width: 100%;
+    }
+
+    .filter button {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-top: 20px;
+
+      flex-basis: calc(
+        50% - 10px
+      ); /* Pour que les boutons soient sur 2 colonnes en tenant compte du gap */
+    }
+
+    .main-container main {
+      margin: 0;
+    }
+
+    .hebergements-and-populaires {
+      flex-direction: column-reverse;
+      gap: 15px;
+    }
+
+    .populaires-container {
+      padding: 30px 20px 30px 20px;
+      margin: 0;
+      border-radius: 0;
+    }
+
+    .populaires {
+      padding: 30px 20px 30px 20px;
+      margin: 0;
+      border-radius: 0;
+    }
+
+    .populaires-cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .populaires-cards .card2 {
+      margin: 0;
+      width: 100%;
+    }
+
+    .hebergements {
+      padding: 30px 20px 30px 20px;
+      margin: 0;
+      border-radius: 0;
+      background-color: white;
+    }
+
+    .hebergements-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding-bottom: 15px;
+    }
+
+    .card {
+      margin: 0;
+      width: 100%;
+      max-width: 335px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .card3 a {
+      max-width: 100%;
+    }
+
+    .card3 img {
+      height: 141px;
+    }
+
+    .footer-container {
+      flex-direction: column;
+      padding: 30px;
+      gap: 50px;
+    }
+
+    .footer-section {
+      padding: 0;
+      width: 100%;
+    }
   }
 }
