@@ -296,7 +296,7 @@ h1 {
   flex-direction: column;
   flex-grow: 1;
   flex-basis: 33%;
-  align-content: space-between;
+  /* align-content: space-between; */
   margin-bottom: 30px;
 }
 
