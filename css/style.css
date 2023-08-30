@@ -3,8 +3,9 @@
   box-sizing: border-box; /* Pour que les paddings et les borders ne soient pas comptés en plus de la largeur */
   margin: 0; /* Pour supprimer les marges par défaut */
   padding: 0; /* Pour supprimer les paddings par défaut */
-  font-family: "Raleway", sans-serif;
+  font-family: Raleway, sans-serif;
   max-width: 1440px;
+
   /* box-shadow: 0 0 0 2px red inset; /* Pour visualiser les box-models */
 }
 
@@ -32,7 +33,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   width: 100%;
   margin: 0;
   margin-bottom: 30px;
@@ -112,7 +112,7 @@ nav {
   position: absolute;
   background-color: var(--main-color);
   height: 2px;
-  width: 0%;
+  width: 0;
   top: 0;
 }
 
@@ -143,20 +143,16 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 49px;
   height: 100%;
-
   color: black;
 }
 
 .form input {
   border: none;
   outline: none;
-
   height: 100%;
   font-weight: 700;
-
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -169,12 +165,10 @@ h1 {
   height: 49px;
   padding: 15px;
   border: none;
-  border-radius: 0px 15px 15px 0px;
-
+  border-radius: 0 15px 15px 0;
   background-color: var(--main-color);
   color: white;
   font-weight: 700;
-
   cursor: pointer;
 }
 
@@ -183,10 +177,8 @@ h1 {
   height: 49px;
   width: 49px;
   padding: 15px;
-
   border: none;
   border-radius: 15px;
-
   cursor: pointer;
   background-color: var(--main-color);
 }
@@ -204,12 +196,10 @@ h1 {
   background-color: white;
   border: 2px solid #d9d9d9;
   border-radius: 25px;
-
   padding: 4px 19px;
   margin-left: 15px;
   height: 50px;
   width: auto;
-
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
@@ -228,9 +218,7 @@ h1 {
 .filter p {
   display: flex;
   align-items: center;
-
   margin: 0;
-
   font-weight: 700;
 }
 
@@ -240,11 +228,9 @@ h1 {
   align-items: center;
   width: 24px;
   height: 24px;
-
   border: 1px solid #d9d9d9;
   border-radius: 25px;
   margin-right: 10px;
-
   font-size: 12px;
 }
 
@@ -281,14 +267,13 @@ h1 {
   width: 30%;
   max-width: 250px;
   background-color: white;
-
   border-radius: 20px;
   padding: 5px 5px 15px 5px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 3px 15px rgba(0, 0, 0, 0.1));
 }
 
 .card img {
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0 0;
   max-height: 124px;
   width: 100%;
   object-fit: cover;
@@ -296,7 +281,7 @@ h1 {
 }
 
 .card-content {
-  padding: 0px 15px 0 15px;
+  padding: 0 15px;
 }
 
 .card-title {
@@ -316,7 +301,7 @@ h1 {
   margin-top: 30px;
 }
 
-.hebergements-plus a {
+.hebergements-link {
   color: black;
   font-weight: 700;
   text-decoration: none;
@@ -351,10 +336,9 @@ h1 {
   min-height: 144px;
   height: 100%;
   background-color: white;
-
   border-radius: 20px;
   padding: 5px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 3px 15px rgba(0, 0, 0, 0.1));
 }
 
 .card2 img {
@@ -390,19 +374,18 @@ h1 {
   height: 439px;
   background-color: white;
   border-radius: 20px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-.card3 a {
+.card3-link {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: black;
-  max-width: 298px;
 }
 
 .card3 img {
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0 0;
   height: 380px;
   width: 100%;
   object-fit: cover;
@@ -412,7 +395,7 @@ h1 {
   padding: 20px;
 }
 
-/*******************$** Footer ******************************/
+/********************* Footer ******************************/
 
 .footer-container {
   display: flex;
@@ -431,12 +414,13 @@ h1 {
   padding: 20px;
   width: 33%;
 }
+
 .footer-container li {
   list-style: none;
   margin-bottom: 15px;
 }
 
-.footer-container a {
+.footer-link {
   text-decoration: none;
   color: black;
 }
@@ -444,8 +428,9 @@ h1 {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /********************** Media queries ***********************/
+
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .main-container {
     padding-bottom: 0;
   }
@@ -476,9 +461,11 @@ h1 {
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (width <= 768px) {
   .logo {
     margin: 0 auto;
+    padding: 30px;
+    align-items: center;
   }
 
   header {
@@ -486,11 +473,6 @@ h1 {
     flex-direction: column;
     align-items: center;
     height: auto;
-  }
-
-  .logo {
-    padding: 30px;
-    align-items: center;
   }
 
   nav {
@@ -536,7 +518,6 @@ h1 {
   .main-container {
     display: flex;
     flex-direction: column;
-    /* padding: 0 20px 20px 20px; */
     padding: 0;
     max-width: 768px;
   }
@@ -564,18 +545,15 @@ h1 {
     height: 49px;
     width: 49px;
     padding: 15px;
-
     border: none;
     border-radius: 15px;
-
     cursor: pointer;
     background-color: var(--main-color);
   }
 
   .filter {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     gap: 10px;
   }
 
@@ -589,12 +567,10 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin-top: 20px;
+    flex-basis: calc(50% - 10px);
 
-    flex-basis: calc(
-      50% - 10px
-    ); /* Pour que les boutons soient sur 2 colonnes en tenant compte du gap */
+    /* Pour que les boutons soient sur 2 colonnes en tenant compte du gap */
   }
 
   .main-container main {
@@ -607,13 +583,13 @@ h1 {
   }
 
   .populaires-container {
-    padding: 30px 20px 30px 20px;
+    padding: 30px 20px;
     margin: 0;
     border-radius: 0;
   }
 
   .populaires {
-    padding: 30px 20px 30px 20px;
+    padding: 30px 20px;
     margin: 0;
     border-radius: 0;
   }
@@ -631,7 +607,7 @@ h1 {
   }
 
   .hebergements {
-    padding: 30px 20px 30px 20px;
+    padding: 30px 20px;
     margin: 0;
     border-radius: 0;
     background-color: white;
