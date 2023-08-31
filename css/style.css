@@ -4,14 +4,13 @@
   margin: 0; /* Pour supprimer les marges par défaut */
   padding: 0; /* Pour supprimer les paddings par défaut */
   font-family: Raleway, sans-serif;
-  max-width: 1440px;
 
   /* box-shadow: 0 0 0 2px red inset; /* Pour visualiser les box-models */
 }
 
 body {
   max-width: 1440px;
-  margin-bottom: 60.5px;
+  margin: 0 auto;
 }
 
 :root {
@@ -46,7 +45,8 @@ body {
   align-items: center;
   width: 100%;
   margin: 0;
-  margin-bottom: 30px;
+  font-size: 22px;
+  /* margin-bottom: 30px; */
 }
 
 .section-title h2 {
@@ -264,7 +264,8 @@ nav {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: 30px; /* Pour créer un espace entre les cartes */
+  justify-content: space-between;
+  margin-top: 30px;
 }
 
 .card {
@@ -272,6 +273,7 @@ nav {
   background-color: white;
   border-radius: 20px;
   padding: 5px 5px 15px 5px;
+  margin-bottom: 30px;
   filter: drop-shadow(0 3px 15px rgba(0, 0, 0, 0.1));
 }
 
@@ -300,10 +302,6 @@ nav {
   padding-bottom: 8px;
 }
 
-.hebergements-plus {
-  margin-top: 30px;
-}
-
 .hebergements-link {
   color: black;
   font-weight: 700;
@@ -326,12 +324,14 @@ nav {
 .populaires-cards {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 45px;
+  margin-top: 30px;
+  
 }
 
 .card2 {
   display: flex;
-  height: 100%;
+  height: 146px;
   background-color: white;
   border-radius: 20px;
   padding: 5px;
@@ -340,7 +340,7 @@ nav {
 
 .card2 img {
   border-radius: 20px 0 0 20px;
-  height: 146px;
+  height: 100%;
   width: 30%;
   object-fit: cover;
 }
@@ -433,6 +433,23 @@ nav {
     margin: 0;
   }
 
+  .filter {
+    flex-wrap: wrap;
+  }
+
+  .filter p {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .filter button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px 0 0;
+  }
+
+
   .hebergements-and-populaires {
     flex-direction: column;
   }
@@ -454,7 +471,15 @@ nav {
 
   .card2 {
     width: 100%;
-    max-height: 146px;
+  }
+
+  .card3,
+  .card3-link {
+    height: 270px;
+  }
+
+  .card3 img {
+    height: 200px;
   }
 }
 
@@ -480,8 +505,12 @@ nav {
     padding: 0;
   }
 
+  .navbar-item {
+    border-bottom: 2px solid var(--main-bg-color);
+  }
+
   .section-title,
-  .hebergement-plus {
+  .hebergement-plus, .card {
     margin: 0;
   }
 
@@ -601,6 +630,10 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 15px;
+  }
+
+  .card3, .card3 a {
+      height:200px;
   }
 
   .card3 img {
