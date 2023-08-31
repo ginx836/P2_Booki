@@ -46,7 +46,6 @@ body {
   width: 100%;
   margin: 0;
   font-size: 22px;
-  /* margin-bottom: 30px; */
 }
 
 .section-title h2 {
@@ -256,6 +255,7 @@ nav {
 }
 
 /*********************** Hebergements ***********************/
+
 .hebergements-container {
   width: 65%;
 }
@@ -275,6 +275,11 @@ nav {
   padding: 5px 5px 15px 5px;
   margin-bottom: 30px;
   filter: drop-shadow(0 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card-link {
+  text-decoration: none;
+  color: black;
 }
 
 .card img {
@@ -326,7 +331,6 @@ nav {
   flex-direction: column;
   gap: 45px;
   margin-top: 30px;
-  
 }
 
 .card2 {
@@ -336,6 +340,13 @@ nav {
   border-radius: 20px;
   padding: 5px;
   filter: drop-shadow(0 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card2-link {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  width: 100%;
 }
 
 .card2 img {
@@ -351,7 +362,6 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  width: 70%;
 }
 
 /********************* Activités ****************************/
@@ -449,7 +459,6 @@ nav {
     margin: 0 15px 0 0;
   }
 
-
   .hebergements-and-populaires {
     flex-direction: column;
   }
@@ -514,7 +523,8 @@ nav {
   }
 
   .section-title,
-  .hebergement-plus, .card {
+  .hebergement-plus,
+  .card {
     margin: 0;
   }
 
@@ -636,8 +646,9 @@ nav {
     gap: 15px;
   }
 
-  .card3, .card3 a {
-      height:200px;
+  .card3,
+  .card3 a {
+    height: 200px;
   }
 
   .card3 img {
