@@ -478,6 +478,10 @@ nav {
     height: 270px;
   }
 
+  .card-title {
+    font-size: 14px;
+  }
+
   .card3 img {
     height: 200px;
   }
