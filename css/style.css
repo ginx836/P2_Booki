@@ -4,8 +4,6 @@
   margin: 0; /* Pour supprimer les marges par défaut */
   padding: 0; /* Pour supprimer les paddings par défaut */
   font-family: Raleway, sans-serif;
-
-  /* box-shadow: 0 0 0 2px red inset; /* Pour visualiser les box-models */
 }
 
 body {
@@ -22,11 +20,15 @@ body {
   color: var(--main-color);
 }
 
+.fa-btn {
+  padding-right: 10px;
+}
+
 .main-container {
   margin: 0 50px;
 }
 
-.search-container h1 {
+.main-title {
   font-size: 22px;
   margin-bottom: 8px;
 }
@@ -39,16 +41,12 @@ body {
   padding: 30px;
 }
 
-.section-title {
+.section-title,
+.title2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 0;
-  font-size: 22px;
-}
-
-.section-title h2 {
   font-size: 22px;
 }
 
@@ -66,7 +64,7 @@ body {
 
 /*********************** Header *****************************/
 
-header {
+.header {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -84,7 +82,7 @@ header {
   height: 19px;
 }
 
-nav {
+.navbar {
   height: 35px;
   width: 328px;
   padding: 0 25px;
@@ -93,13 +91,10 @@ nav {
 .navbar-list {
   display: flex;
   justify-content: space-around;
-  align-items: flex-end;
-  list-style: none;
   height: 100%;
 }
 
 .navbar-item {
-  height: 100%;
   display: flex;
   align-items: flex-end;
   position: relative;
@@ -110,12 +105,12 @@ nav {
   text-decoration: none;
 }
 
-.navbar-item a:hover {
+.navbar-item :hover {
   color: var(--main-color);
   transition: 0.3s; /* Pour une transition fluide */
 }
 
-.navbar-item a::before {
+.navbar-item ::before {
   /* Pour créer le trait qui apparaît au survol */
   content: "";
   display: block;
@@ -126,7 +121,7 @@ nav {
   top: 0;
 }
 
-.navbar-item a:hover::before {
+.navbar-item :hover::before {
   /* Pour faire apparaître le trait au survol */
   width: 100%;
 }
@@ -137,7 +132,7 @@ nav {
   display: flex;
   align-items: center;
   height: 49px;
-  width: auto;
+  /* width: auto; */
 }
 
 .searchbar {
@@ -155,7 +150,7 @@ nav {
   color: black;
 }
 
-.form input {
+.input {
   border: none;
   outline: none;
   height: 100%;
@@ -165,7 +160,7 @@ nav {
   padding-right: 24px;
 }
 
-.form input::placeholder {
+.input::placeholder {
   color: black;
 }
 
@@ -200,7 +195,9 @@ nav {
   display: flex;
 }
 
-.filter button {
+.filter-btn {
+  display: flex;
+  align-items: center;
   background-color: white;
   border: 2px solid #d9d9d9;
   border-radius: 25px;
@@ -213,14 +210,9 @@ nav {
   cursor: pointer;
 }
 
-.filter button:hover {
+.filter-btn:hover {
   background-color: var(--filter-bg-color);
   transition: 0.3s;
-}
-
-.filter i {
-  color: var(--main-color);
-  padding-right: 10px;
 }
 
 .filter p {
@@ -272,7 +264,7 @@ nav {
   width: 30%;
   background-color: white;
   border-radius: 20px;
-  padding: 5px 5px 15px 5px;
+  padding: 5px 5px 15px;
   margin-bottom: 30px;
   filter: drop-shadow(0 3px 15px rgba(0, 0, 0, 0.1));
 }
@@ -377,7 +369,6 @@ nav {
 }
 
 .card3 {
-  flex-shrink: 1;
   flex-basis: 25%;
   height: 439px;
   background-color: white;
@@ -408,7 +399,6 @@ nav {
 .footer-container {
   display: flex;
   justify-content: space-evenly;
-  box-sizing: border-box;
   background-color: var(--main-bg-color);
 }
 
@@ -424,8 +414,8 @@ nav {
 }
 
 .footer-container li {
-  list-style: none;
   margin-bottom: 15px;
+  list-style-type: none;
 }
 
 .footer-link {
@@ -439,9 +429,6 @@ nav {
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (width <= 1024px) {
-  body {
-    margin: 0;
-  }
 
   .filter {
     flex-wrap: wrap;
@@ -452,10 +439,7 @@ nav {
     margin-bottom: 20px;
   }
 
-  .filter button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .filter-btn {
     margin: 0 15px 0 0;
   }
 
@@ -501,17 +485,16 @@ nav {
   .logo {
     margin: 0 auto;
     padding: 30px;
-    align-items: center;
   }
 
-  header {
-    display: flex;
+  .header {
     flex-direction: column;
     align-items: center;
     height: auto;
   }
 
-  nav {
+  .navbar,
+  .footer-section {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -542,7 +525,7 @@ nav {
     position: absolute;
     background-color: var(--main-color);
     height: 2px;
-    width: 0%;
+    width: 0;
     bottom: 0;
   }
 
@@ -551,14 +534,13 @@ nav {
     width: 100%;
   }
 
-  .navbar-item a:hover::before {
-    width: 0%;
+  .navbar-item :hover::before {
+    width: 0;
   }
 
   .main-container {
     display: flex;
     flex-direction: column;
-    max-width: 768px;
     margin: 0;
   }
 
@@ -585,25 +567,15 @@ nav {
   }
 
   .filter {
-    display: flex;
     flex-flow: row wrap;
     gap: 10px;
     width: 100%;
   }
 
-  .filter p {
-    display: flex;
-    width: 100%;
-  }
-
-  .filter button {
+  .filter-btn {
     margin: 0;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
     flex-basis: calc(50% - 10px);
-
     /* Pour que les boutons soient sur 2 colonnes en tenant compte du gap */
   }
 
@@ -619,29 +591,22 @@ nav {
   }
 
   .populaires-cards {
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 15px;
     margin-top: 15px;
   }
 
   .hebergements-container {
     padding: 20px;
-    margin: 0;
-    border-radius: 0;
     background-color: white;
   }
 
   .hebergements-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
     margin: 15px 0;
   }
 
-  .container {
-    display: flex;
+  .container,
+  .hebergements-cards {
     flex-direction: column;
     gap: 15px;
   }
@@ -659,10 +624,5 @@ nav {
     flex-direction: column;
     padding: 30px;
     gap: 50px;
-  }
-
-  .footer-section {
-    padding: 0;
-    width: 100%;
   }
 }

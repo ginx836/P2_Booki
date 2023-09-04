@@ -13,9 +13,9 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <a class="logo" href="#"><img src="./images/logo/Booki.png" alt="Logo de Booki"></a>
-        <nav>
+        <nav class="navbar">
             <ul class="navbar-list">
                 <li class="navbar-item">
                     <a href="#hebergements">Hébergements</a>
@@ -28,13 +28,13 @@
     </header>
     <section class="search-container main-container margin-section">
         <div class="margin-section">
-            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <h1 class="main-title">Trouvez votre hébergement pour des vacances de rêve</h1>
             <p class="headlines-txt">En plein centre-ville ou en pleine nature</p>
         </div>
         <form class="form margin-section" action="#" method="post">
             <div class="form searchbar">
                 <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                <input type="search" name="search" id="search" placeholder="Marseille, France">
+                <input class="input" type="search" name="search" id="search" placeholder="Marseille, France">
             </div>
             <div class="searchbar-button">
                 <button class="btn-form-desktop" type="submit">Rechercher</button>
@@ -45,20 +45,20 @@
         </form>
         <div class="filter margin-section">
             <p>Filtres</p>
-            <button name="economique" type="button">
-                <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+            <button class="filter-btn" name="economique" type="button">
+                <i class="fa-solid fa-btn fa-money-bill-wave" aria-hidden="true"></i>
                 Économique
             </button>
-            <button name="familial" type="button">
-                <i class="fa-solid fa-person" aria-hidden="true"></i>
+            <button class="filter-btn" name="familial" type="button">
+                <i class="fa-solid fa-btn fa-person" aria-hidden="true"></i>
                 Familial
             </button>
-            <button name="romantique" type="button">
-                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+            <button class="filter-btn" name="romantique" type="button">
+                <i class="fa-solid fa-btn fa-heart" aria-hidden="true"></i>
                 Romantique
             </button>
-            <button name="pepite" type="button">
-                <i class="fa-solid fa-fire" aria-hidden="true"></i>
+            <button class="filter-btn" name="pepite" type="button">
+                <i class="fa-solid fa-btn fa-fire" aria-hidden="true"></i>
                 Nos pépites
             </button>
         </div>
@@ -75,7 +75,7 @@
         <div class="hebergements-and-populaires">
             <section id="hebergements" class="section-container hebergements-container">
                 <div class="section-title">
-                    <h2>Hébergements à Marseille</h2>
+                    <h2 class="title2">Hébergements à Marseille</h2>
                 </div>
                 <div class="hebergements-cards">
                     <!-- Ajout d'une entité HTML devant le symbole € pour respecter la nomenclature> -->
@@ -206,7 +206,7 @@
             </section>
             <section class="section-container populaires-container">
                 <div class="section-title">
-                    <h2>Les plus populaires</h2>
+                    <h2 class="title2">Les plus populaires</h2>
                     <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
                 </div>
                 <div class="populaires-cards">
@@ -275,8 +275,8 @@
         </div>
     </main>
     <section id="activites" class="activites-container margin-section main-container">
-        <div>
-            <h2 class="section-title">Activités à Marseille</h2>
+        <div class="section-title">
+            <h2 class="title2">Activités à Marseille</h2>
         </div>
         <div class="container">
             <div class="card3">
